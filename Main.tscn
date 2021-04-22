@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/KinematicPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/RigidPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/LerpaDerp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://objects/Tweener.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -42,3 +44,9 @@ position = Vector2( 411.663, 144.236 )
 
 [node name="KinematicPlayer" parent="." instance=ExtResource( 1 )]
 position = Vector2( 220.564, 148.726 )
+
+[node name="LerpaDerp" parent="." instance=ExtResource( 3 )]
+position = Vector2( 271.156, 355.76 )
+
+[node name="Tweener" parent="." instance=ExtResource( 5 )]
+position = Vector2( 372.979, 334.546 )
