@@ -5,9 +5,10 @@ export var rotate_speed: float = 0.1
 
 # Tweak these to to make the dash feel different
 export var dash_distance: int = 300
-export var max_speed = 700
+export var max_speed = 500
 export var min_speed = 100
-export var lerp_multiplier = 10
+export var lerp_percentage = 0.6
+export var lerp_multiplier = 5
 
 var target_position = Vector2.ZERO
 var is_dashing = false
@@ -31,8 +32,8 @@ func _physics_process(delta):
 	if is_dashing:
 		var direction = global_position.direction_to(target_position)
 		
-		# Get the position that is between the character and the target position at 60% of the way
-		var lerped_pos = lerp(global_position, target_position, 0.60)
+		# Get the position that is between the character and the target position at x% of the way
+		var lerped_pos = lerp(global_position, target_position, lerp_percentage)
 		
 		# Use the distance between the current position and lerped position as a way determine speed. 
 		# (Basically, the closer you get to the target, the lower the lerped_speed will be)

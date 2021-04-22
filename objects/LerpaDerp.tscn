@@ -9,6 +9,9 @@ radius = 1.39859
 
 [node name="LerpaDerp" type="KinematicBody2D"]
 script = ExtResource( 1 )
+dash_distance = 400
+min_speed = 50
+lerp_multiplier = 3
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
